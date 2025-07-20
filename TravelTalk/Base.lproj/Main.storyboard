@@ -52,6 +52,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HuS-ps-r6I"/>
+                    <connections>
+                        <outlet property="FriendTableView" destination="Agb-A1-GwI" id="IDo-a3-I31"/>
+                        <outlet property="searchFriends" destination="diP-St-1bv" id="Izh-oA-hNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
