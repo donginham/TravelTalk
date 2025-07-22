@@ -7,12 +7,13 @@
 
 import UIKit
 
-class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
+class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
     var profile : [Chat] = []
     let mylist = ChatList.list
     let me = "MyLogTableViewCell"
     let you = "YourLogTableViewCell"
+    @IBOutlet var sendButton: UIButton!
     @IBOutlet var sendChat: UIButton!
     @IBOutlet var ChatTable: UITableView!
     @IBOutlet var roomTitle: UINavigationItem!
@@ -21,15 +22,14 @@ class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         super.viewDidLoad()
         ChatTable.dataSource = self
         ChatTable.delegate = self
-        
+        sendButton.setTitle("", for: .normal)
+        sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
         let myLogIB = UINib(nibName: me, bundle: nil)
         let yourLogIB = UINib(nibName: you, bundle: nil)
         ChatTable.register(myLogIB, forCellReuseIdentifier: me)
         ChatTable.register(yourLogIB, forCellReuseIdentifier: you)
     }
-    func textViewDidEndEditing(_ textView: UITextView) {
-        print(textView.text)
-    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return profile.count
     }
@@ -55,9 +55,26 @@ class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     }
     //chat
     @objc func sendButtonClicked(_ sender: UIButton) {
-        //메세지에 addChat.text값을 append - 어떻게 잘 접근해서 message까지 가야함
-        //어떻게? 으ㅡ으으으
+        guard let inputText = addChat.text, !inputText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return
+        } // !inputText.trimmingCharacters(in: .whitespacesAndNewlines - 공백이나 줄바꿈인지 확인하는 구문. 스페이스바 \n 이런거
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let currentDateString = formatter.string(from: Date())
+        let newChat = Chat(
+            user: ChatList.me,
+            date: currentDateString,
+            message: inputText
+        )
+        profile.append(newChat)
         
+        
+        addChat.text = ""
+        addChat.resignFirstResponder()
+        //누르면 채팅뷰 값을 초기화, 창내려줌.
         ChatTable.reloadData()
+        let lastIndex = IndexPath(row: profile.count - 1, section: 0)
+        ChatTable.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+        //최신 메시지가 있는 위치까지 스크롤해줌
     }
 }
