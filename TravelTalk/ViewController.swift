@@ -52,7 +52,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let logView = UIStoryboard(name: "Main", bundle: nil)
         let lV = logView.instantiateViewController(withIdentifier: log) as! LogViewController
         lV.profile = row.chatList
-        present(lV,animated: true)
+        navigationController?.pushViewController(lV, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

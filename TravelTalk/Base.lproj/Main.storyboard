@@ -70,26 +70,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-cT-HAQ">
-                                <rect key="frame" x="0.0" y="162" width="393" height="571"/>
+                                <rect key="frame" x="0.0" y="132" width="393" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="571" id="pbb-8v-2ku"/>
+                                    <constraint firstAttribute="height" constant="601" id="pbb-8v-2ku"/>
                                 </constraints>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3E-JX-z4K">
-                                <rect key="frame" x="0.0" y="118" width="393" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="AyR-e0-TEu"/>
-                                </items>
-                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoJ-Zb-hXk">
-                                <rect key="frame" x="0.0" y="730" width="393" height="54"/>
+                                <rect key="frame" x="0.0" y="727" width="393" height="57"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="MJB-id-za1"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3E-JX-z4K">
+                                <rect key="frame" x="0.0" y="88" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="AyR-e0-TEu"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t7c-LO-Fmk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,13 +97,13 @@
                             <constraint firstItem="zoJ-Zb-hXk" firstAttribute="leading" secondItem="t7c-LO-Fmk" secondAttribute="leading" id="1x8-hn-Y0C"/>
                             <constraint firstItem="W3E-JX-z4K" firstAttribute="leading" secondItem="t7c-LO-Fmk" secondAttribute="leading" id="26t-uK-qGj"/>
                             <constraint firstItem="zoJ-Zb-hXk" firstAttribute="bottom" secondItem="t7c-LO-Fmk" secondAttribute="bottom" id="2F3-WT-mcF"/>
-                            <constraint firstItem="zoJ-Zb-hXk" firstAttribute="top" secondItem="0tn-cT-HAQ" secondAttribute="bottom" constant="-3" id="EeC-8a-MG5"/>
+                            <constraint firstItem="zoJ-Zb-hXk" firstAttribute="top" secondItem="0tn-cT-HAQ" secondAttribute="bottom" constant="-6" id="EeC-8a-MG5"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="leading" secondItem="t7c-LO-Fmk" secondAttribute="leading" id="Vtn-JR-Qyw"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="trailing" secondItem="t7c-LO-Fmk" secondAttribute="trailing" id="Wtx-Xe-w87"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="top" secondItem="W3E-JX-z4K" secondAttribute="bottom" id="XFK-GY-5lC"/>
                             <constraint firstItem="t7c-LO-Fmk" firstAttribute="trailing" secondItem="zoJ-Zb-hXk" secondAttribute="trailing" id="aXo-fx-lkp"/>
                             <constraint firstItem="W3E-JX-z4K" firstAttribute="trailing" secondItem="t7c-LO-Fmk" secondAttribute="trailing" id="hFX-xV-pD2"/>
-                            <constraint firstItem="W3E-JX-z4K" firstAttribute="top" secondItem="t7c-LO-Fmk" secondAttribute="top" id="lhY-OP-h9k"/>
+                            <constraint firstItem="W3E-JX-z4K" firstAttribute="top" secondItem="t7c-LO-Fmk" secondAttribute="top" constant="-30" id="lhY-OP-h9k"/>
                         </constraints>
                     </view>
                     <connections>

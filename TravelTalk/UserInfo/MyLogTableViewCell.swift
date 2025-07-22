@@ -16,11 +16,18 @@ class MyLogTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func chatData(chat:Chat) {
+        myChat.text = chat.message
+        myDate.text = chat.date
+    }
+    func configureChat(chat:Chat) {
+        myChat.text = chat.message
+        myBubble.layer.borderWidth = 1
+        myBubble.layer.cornerRadius = 10
+        myChat.numberOfLines = 0
+        myChat.font = .systemFont(ofSize: 12)
+        myDate.font = .systemFont(ofSize: 8)
+        myDate.textColor = .lightGray
     }
     
 }
