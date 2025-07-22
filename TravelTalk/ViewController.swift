@@ -30,9 +30,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             } else {
                 searching = true
                 filteredChatRooms = list.filter { chatRoom in
-                    chatRoom.chatList.contains { chat in
-                        chat.user.name.localizedCaseInsensitiveContains(searchText)
-                    }
+                    if let lastChat = chatRoom.chatList.last {
+                            return lastChat.user.name.localizedCaseInsensitiveContains(searchText)
+                        } else {
+                            return false
+                        }
                 }
             }
             FriendTableView.reloadData()
