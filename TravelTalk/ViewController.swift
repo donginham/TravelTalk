@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
     
     @IBOutlet var FriendTableView: UITableView!
     @IBOutlet var searchFriends: UISearchBar!
     var searching: Bool = false
-    var filterList = ChatList.list
-    var allChat = ChatList.list
+//    var filterList = Chat
+//    var allChat = ChatList.list
     let identifier = "ProfileTableViewCell"
     let list = ChatList.list
     override func viewDidLoad() {
@@ -23,9 +23,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let xib = UINib(nibName: identifier, bundle: nil)
         FriendTableView.register(xib, forCellReuseIdentifier: identifier)
     }
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ChatList.list.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

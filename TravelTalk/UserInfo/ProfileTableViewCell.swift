@@ -16,9 +16,12 @@ class ProfileTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        profileImage.layer.cornerRadius = profileImage.frame.width /  2
+        profileImage.layer.borderWidth = 1
+        profileImage.clipsToBounds = true
+        profileImage.contentMode = .scaleAspectFit
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

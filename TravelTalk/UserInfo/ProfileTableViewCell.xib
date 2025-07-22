@@ -19,6 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enM-v3-GP9">
                         <rect key="frame" x="10" y="8" width="65" height="65"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="65" id="2Vs-dn-XHu"/>
+                            <constraint firstAttribute="height" constant="65" id="CHd-zb-fQB"/>
                             <constraint firstAttribute="width" secondItem="enM-v3-GP9" secondAttribute="height" multiplier="1:1" id="RW8-wa-XFO"/>
                         </constraints>
                     </imageView>
@@ -48,7 +50,6 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="enM-v3-GP9" secondAttribute="bottom" constant="8" id="0cN-gn-zYI"/>
                     <constraint firstItem="bnQ-LL-Wkw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BXw-vO-Iei"/>
                     <constraint firstItem="KKT-MM-VNX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="CUP-wV-hHX"/>
                     <constraint firstItem="enM-v3-GP9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="CfA-se-SUa"/>

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		47D9F45B2E2F762900873A84 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 47D9F45A2E2F762900873A84 /* IQKeyboardManagerSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		47479C922E2A1B93004E4E21 /* TravelTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D9F45B2E2F762900873A84 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = TravelTalk;
 			packageProductDependencies = (
+				47D9F45A2E2F762900873A84 /* IQKeyboardManagerSwift */,
 			);
 			productName = TravelTalk;
 			productReference = 47479C922E2A1B93004E4E21 /* TravelTalk.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 47479C892E2A1B93004E4E21;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				47D9F4592E2F762900873A84 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 47479C932E2A1B93004E4E21 /* Products */;
 			projectDirPath = "";
@@ -347,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47D9F4592E2F762900873A84 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47D9F45A2E2F762900873A84 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47D9F4592E2F762900873A84 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47479C8A2E2A1B93004E4E21 /* Project object */;
 }

@@ -23,7 +23,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xU-Vr-veT">
                                 <rect key="frame" x="10.000000000000028" y="10" width="41.333333333333336" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="8Ef-fn-OWs"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="8Ef-fn-OWs"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="reH-CK-r4J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
