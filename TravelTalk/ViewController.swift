@@ -11,7 +11,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet var FriendTableView: UITableView!
     @IBOutlet var searchFriends: UISearchBar!
-    
+    var searching: Bool = false
+    var filterList = ChatList.list
+    var allChat = ChatList.list
     let identifier = "ProfileTableViewCell"
     let list = ChatList.list
     override func viewDidLoad() {
@@ -43,6 +45,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row  = list[indexPath.row]
+        let log = "LogViewController"
+        let logView = UIStoryboard(name: "Main", bundle: nil)
+        let lV = logView.instantiateViewController(withIdentifier: log) as! LogViewController
+        lV.profile = row.chatList
+        present(lV,animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
