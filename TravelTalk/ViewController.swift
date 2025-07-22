@@ -11,6 +11,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet var FriendTableView: UITableView!
     @IBOutlet var searchFriends: UISearchBar!
+    
     var searching: Bool = false
     var filteredChatRooms: [ChatRoom] = []
     let identifier = "ProfileTableViewCell"
@@ -68,6 +69,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let logView = UIStoryboard(name: "Main", bundle: nil)
         let lV = logView.instantiateViewController(withIdentifier: log) as! LogViewController
         lV.profile = row.chatList
+        lV.chatroomName = row.chatroomName
         navigationController?.pushViewController(lV, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

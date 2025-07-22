@@ -7,13 +7,13 @@
 
 import UIKit
 
-class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextViewDelegate {
   
     var profile : [Chat] = []
+    var chatroomName: String = ""
     let mylist = ChatList.list
     let me = "MyLogTableViewCell"
     let you = "YourLogTableViewCell"
-    @IBOutlet var sendButton: UIButton!
     @IBOutlet var sendChat: UIButton!
     @IBOutlet var ChatTable: UITableView!
     @IBOutlet var roomTitle: UINavigationItem!
@@ -22,12 +22,17 @@ class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         super.viewDidLoad()
         ChatTable.dataSource = self
         ChatTable.delegate = self
-        sendButton.setTitle("", for: .normal)
-        sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        sendChat.setTitle("", for: .normal)
+        sendChat.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        addChat.delegate = self
+        addChat.text = "메세지를 입력하세요."
+        addChat.textColor = .lightGray
         let myLogIB = UINib(nibName: me, bundle: nil)
         let yourLogIB = UINib(nibName: you, bundle: nil)
         ChatTable.register(myLogIB, forCellReuseIdentifier: me)
         ChatTable.register(yourLogIB, forCellReuseIdentifier: you)
+        roomTitle.title = chatroomName
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,8 +72,6 @@ class LogViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
             message: inputText
         )
         profile.append(newChat)
-        
-        
         addChat.text = ""
         addChat.resignFirstResponder()
         //누르면 채팅뷰 값을 초기화, 창내려줌.

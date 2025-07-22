@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TRVEL TALK-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelTalk" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,41 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-A1-GwI">
-                                <rect key="frame" x="0.0" y="262" width="393" height="472"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="572"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="diP-St-1bv">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="JIb-O9-e5a"/>
+                                    </connections>
+                                </searchBar>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPZ-mm-upi">
-                                <rect key="frame" x="0.0" y="162" width="393" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="393" id="Ctc-MJ-NSM"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Title" id="9VS-Fv-xMp"/>
-                                </items>
-                            </navigationBar>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="diP-St-1bv">
-                                <rect key="frame" x="0.0" y="206" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JIb-O9-e5a"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Agb-A1-GwI" secondAttribute="trailing" id="0SI-RR-fhQ"/>
-                            <constraint firstItem="diP-St-1bv" firstAttribute="top" secondItem="rPZ-mm-upi" secondAttribute="bottom" id="2lX-0h-m2I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Agb-A1-GwI" secondAttribute="bottom" constant="50" id="95o-nP-BdB"/>
                             <constraint firstItem="Agb-A1-GwI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DAs-Hd-VlW"/>
-                            <constraint firstItem="diP-St-1bv" firstAttribute="leading" secondItem="rPZ-mm-upi" secondAttribute="leading" id="NHJ-DS-G6N"/>
-                            <constraint firstItem="rPZ-mm-upi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U5i-6V-ZtV"/>
-                            <constraint firstItem="diP-St-1bv" firstAttribute="trailing" secondItem="rPZ-mm-upi" secondAttribute="trailing" id="XLK-hY-odK"/>
-                            <constraint firstItem="Agb-A1-GwI" firstAttribute="top" secondItem="diP-St-1bv" secondAttribute="bottom" id="dhv-Ug-lAZ"/>
-                            <constraint firstItem="diP-St-1bv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geH-fC-05O"/>
+                            <constraint firstItem="Agb-A1-GwI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fpr-vQ-XRY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Agb-A1-GwI" secondAttribute="bottom" constant="50" id="UJ7-IR-q2N"/>
+                            <constraint firstItem="Agb-A1-GwI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kLE-AB-1Dr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HuS-ps-r6I"/>
+                    <navigationItem key="navigationItem" title="TRVEL TALK" id="HuS-ps-r6I"/>
                     <connections>
                         <outlet property="FriendTableView" destination="Agb-A1-GwI" id="IDo-a3-I31"/>
                         <outlet property="searchFriends" destination="diP-St-1bv" id="Izh-oA-hNN"/>
@@ -79,20 +67,22 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3E-JX-z4K">
                                 <rect key="frame" x="0.0" y="56" width="393" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="AyR-e0-TEu"/>
+                                    <navigationItem title="Title" id="AyR-e0-TEu">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="742-nV-RdY"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-K8-WFA">
-                                <rect key="frame" x="318" y="733" width="75" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="qv4-UN-msi"/>
-                                </constraints>
+                                <rect key="frame" x="318" y="733" width="75" height="59"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoJ-Zb-hXk">
                                 <rect key="frame" x="0.0" y="733" width="318" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="59" id="JKZ-o6-snc"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -102,11 +92,15 @@
                             <constraint firstItem="zoJ-Zb-hXk" firstAttribute="top" secondItem="0tn-cT-HAQ" secondAttribute="bottom" id="0eu-n4-ZCK"/>
                             <constraint firstItem="t7c-LO-Fmk" firstAttribute="trailing" secondItem="gzR-K8-WFA" secondAttribute="trailing" id="0v1-pI-Hv5"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="leading" secondItem="DqY-jS-MzQ" secondAttribute="leading" id="3kU-U7-93p"/>
+                            <constraint firstAttribute="bottom" secondItem="zoJ-Zb-hXk" secondAttribute="bottom" constant="60" id="5Do-cR-Vaf"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="leading" secondItem="zoJ-Zb-hXk" secondAttribute="leading" id="If3-oj-PvA"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="trailing" secondItem="W3E-JX-z4K" secondAttribute="trailing" id="S1D-mx-hjC"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="trailing" secondItem="gzR-K8-WFA" secondAttribute="trailing" id="U9S-6J-OX9"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="top" secondItem="DqY-jS-MzQ" secondAttribute="top" constant="100" id="YGR-b3-lIq"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="leading" secondItem="W3E-JX-z4K" secondAttribute="leading" id="a5I-sb-XiF"/>
+                            <constraint firstItem="gzR-K8-WFA" firstAttribute="height" secondItem="zoJ-Zb-hXk" secondAttribute="height" id="ggR-ZI-gWE"/>
+                            <constraint firstItem="zoJ-Zb-hXk" firstAttribute="leading" secondItem="t7c-LO-Fmk" secondAttribute="leading" id="iFc-jm-bQU"/>
+                            <constraint firstItem="gzR-K8-WFA" firstAttribute="leading" secondItem="zoJ-Zb-hXk" secondAttribute="trailing" id="n28-ey-WKL"/>
                             <constraint firstItem="gzR-K8-WFA" firstAttribute="leading" secondItem="zoJ-Zb-hXk" secondAttribute="trailing" id="nt3-bK-mmg"/>
                             <constraint firstItem="gzR-K8-WFA" firstAttribute="top" secondItem="0tn-cT-HAQ" secondAttribute="bottom" id="sKe-BW-aFB"/>
                             <constraint firstItem="0tn-cT-HAQ" firstAttribute="top" secondItem="W3E-JX-z4K" secondAttribute="bottom" id="yd0-cO-CHW"/>
@@ -117,7 +111,6 @@
                         <outlet property="ChatTable" destination="0tn-cT-HAQ" id="cmw-Xm-bJ3"/>
                         <outlet property="addChat" destination="zoJ-Zb-hXk" id="g16-kf-VxL"/>
                         <outlet property="roomTitle" destination="AyR-e0-TEu" id="Mhk-sM-p4M"/>
-                        <outlet property="sendButton" destination="gzR-K8-WFA" id="zSN-8e-dyr"/>
                         <outlet property="sendChat" destination="gzR-K8-WFA" id="IPM-ik-8vA"/>
                     </connections>
                 </viewController>
